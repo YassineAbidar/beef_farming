@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bean;
+package model;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -13,12 +13,11 @@ import java.util.List;
  *
  * @author alikhyatti
  */
-public class ControleMensuel {
+public class Import {
     private long id;
-    private BigDecimal Poids;
+    private List<ImporteRace> importeRaces;
     private Date date;
-    private Bovin bovin;
-    private ImporteRace importeRace;
+    private BigDecimal prixTotal;
 
     public long getId() {
         return id;
@@ -28,12 +27,12 @@ public class ControleMensuel {
         this.id = id;
     }
 
-    public BigDecimal getPoids() {
-        return Poids;
+    public List<ImporteRace> getImporteRaces() {
+        return importeRaces;
     }
 
-    public void setPoids(BigDecimal Poids) {
-        this.Poids = Poids;
+    public void setImporteRaces(List<ImporteRace> importeRaces) {
+        this.importeRaces = importeRaces;
     }
 
     public Date getDate() {
@@ -44,20 +43,12 @@ public class ControleMensuel {
         this.date = date;
     }
 
-    public Bovin getBovin() {
-        return bovin;
+    public BigDecimal getPrixTotal() {
+        return prixTotal;
     }
 
-    public void setBovin(Bovin bovin) {
-        this.bovin = bovin;
-    }
-
-    public ImporteRace getImporteRace() {
-        return importeRace;
-    }
-
-    public void setImporteRace(ImporteRace importeRace) {
-        this.importeRace = importeRace;
+    public void setPrixTotal(BigDecimal prixTotal) {
+        this.prixTotal = prixTotal;
     }
     
     
