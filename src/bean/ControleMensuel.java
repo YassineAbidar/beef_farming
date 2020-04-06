@@ -51,6 +51,14 @@ public class ControleMensuel {
     public void setBovin(Bovin bovin) {
         this.bovin = bovin;
     }
+
+    public ImporteRace getImporteRace() {
+        return importeRace;
+    }
+
+    public void setImporteRace(ImporteRace importeRace) {
+        this.importeRace = importeRace;
+    }
     
     
 }

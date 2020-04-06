@@ -13,7 +13,8 @@ import java.util.List;
  * @author alikhyatti
  */
 public class Bovin {
-      private long id;
+
+    private long id;
     private long idBoucle;//referance
     private int age;
     private String nom;
@@ -58,6 +59,5 @@ public class Bovin {
     public void setControleMensuels(List<ControleMensuel> controleMensuels) {
         this.controleMensuels = controleMensuels;
     }
-    
-    
+
 }

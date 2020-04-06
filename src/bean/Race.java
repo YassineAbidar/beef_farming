@@ -50,6 +50,14 @@ public class Race {
     public void setExpectedEvolution(ExpectedEvolution expectedEvolution) {
         this.expectedEvolution = expectedEvolution;
     }
+
+    public List<ImporteRace> getImporteRaces() {
+        return importeRaces;
+    }
+
+    public void setImporteRaces(List<ImporteRace> importeRaces) {
+        this.importeRaces = importeRaces;
+    }
     
     
 }
