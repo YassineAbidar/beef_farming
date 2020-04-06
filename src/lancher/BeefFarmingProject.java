@@ -5,12 +5,8 @@
  */
 package lancher;
 
+import dataBase.ConnectBd;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
@@ -18,27 +14,19 @@ import javafx.stage.Stage;
  * @author yassine
  */
 public class BeefFarmingProject extends Application {
+     @Override
+     public void init() throws Exception {
+       ConnectBd.getConnexion();
+    }
+     @Override
+      public void stop() throws Exception {
+        ConnectBd.close();
+    }
     
+      
     @Override
     public void start(Stage primaryStage) {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
-        
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
-        
-        Scene scene = new Scene(root, 300, 250);
-        
-        primaryStage.setTitle("Hello World!");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        System.out.println("lancher.BeefFarmingProject.start()");
     }
 
     /**

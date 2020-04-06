@@ -15,7 +15,7 @@ public class Race {
     private long id;
     private String libelle;
     private String origine;
-    private ExpectedEvolution expectedEvolution;
+ 
     private List<ImporteRace> importeRaces;
     
 
@@ -43,13 +43,7 @@ public class Race {
         this.origine = origine;
     }
 
-    public ExpectedEvolution getExpectedEvolution() {
-        return expectedEvolution;
-    }
-
-    public void setExpectedEvolution(ExpectedEvolution expectedEvolution) {
-        this.expectedEvolution = expectedEvolution;
-    }
+   
 
     public List<ImporteRace> getImporteRaces() {
         return importeRaces;
