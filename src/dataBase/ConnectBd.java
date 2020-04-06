@@ -46,7 +46,7 @@ public class ConnectBd {
     
      public static void close() throws SQLException {
               connection.close();
-         
+              System.out.println("data base closed");
        
     }
 }

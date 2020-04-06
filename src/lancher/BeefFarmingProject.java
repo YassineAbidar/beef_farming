@@ -7,6 +7,9 @@ package lancher;
 
 import dataBase.ConnectBd;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
@@ -25,8 +28,16 @@ public class BeefFarmingProject extends Application {
     
       
     @Override
-    public void start(Stage primaryStage) {
-        System.out.println("lancher.BeefFarmingProject.start()");
+    public void start(Stage stage) throws Exception {
+         Parent root = FXMLLoader.load(getClass().getResource("/view/MainController.fxml"));
+        
+        Scene scene = new Scene(root);
+        stage.setTitle("gestion de Bovins");
+        stage.setResizable(false);
+        stage.setScene(scene);
+        stage.show();
+        
+         
     }
 
     /**
