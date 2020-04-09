@@ -17,14 +17,14 @@ import javafx.stage.Stage;
  * @author yassine
  */
 public class BeefFarmingProject extends Application {
-     @Override
-     public void init() throws Exception {
-       ConnectBd.getConnexion();
-    }
-     @Override
-      public void stop() throws Exception {
-        ConnectBd.close();
-    }
+//     @Override
+//     public void init() throws Exception {
+//       ConnectBd.getConnexion();
+//    }
+//     @Override
+//      public void stop() throws Exception {
+//        ConnectBd.close();
+//    }
     
       
     @Override
@@ -33,7 +33,7 @@ public class BeefFarmingProject extends Application {
         
         Scene scene = new Scene(root);
         stage.setTitle("gestion de Bovins");
-        stage.setResizable(false);
+       // stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
         

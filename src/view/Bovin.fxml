@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1">
-    <stylesheets>
-        <URL value="@bovin.css"/>
-    </stylesheets>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="361.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <JFXTextField focusColor="#0d1c4a" layoutX="14.0" layoutY="57.0" prefHeight="37.0" prefWidth="315.0" promptText="IdBoucle" unFocusColor="#7308ff" AnchorPane.bottomAnchor="318.0" AnchorPane.topAnchor="57.0" />
+      <JFXTextField focusColor="#0d1c4a" layoutX="14.0" layoutY="119.0" prefHeight="25.0" prefWidth="315.0" promptText="IdBoucle" text="age" unFocusColor="#7308ff" />
+      <JFXTextField focusColor="#0d1c4a" layoutX="14.0" layoutY="193.0" prefHeight="25.0" prefWidth="315.0" promptText="IdBoucle" text="nom" unFocusColor="#7308ff" />
+      <JFXTextField focusColor="#0d1c4a" layoutX="14.0" layoutY="235.0" prefHeight="25.0" prefWidth="315.0" promptText="IdBoucle" text="poids" unFocusColor="#7308ff" />
+      <JFXButton layoutX="14.0" layoutY="306.0" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #008B8B;" text="Ajouter" />
+      <JFXButton disable="true" layoutX="242.0" layoutY="306.0" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #008B8B;" text="Import" />
+   </children>
 </AnchorPane>

@@ -5,7 +5,7 @@
  */
 package model;
 
-import java.math.BigDecimal;
+
 import java.util.List;
 
 /**
@@ -15,7 +15,7 @@ import java.util.List;
 public class Bovin {
 
     private long id;
-    private long idBoucle;//referance
+    private long idBoucle;//reference
     private int age;
     private String nom;
     private List<ControleMensuel> controleMensuels;
