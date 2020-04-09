@@ -5,9 +5,12 @@
  */
 package controller;
 
+import com.jfoenix.effects.JFXDepthManager;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.layout.Pane;
 
 /**
  *
@@ -15,9 +18,15 @@ import javafx.fxml.Initializable;
  */
 public class BovinController implements Initializable{
 
+    @FXML
+    private Pane paneImportRace;
+    @FXML
+    private Pane PaneInfo;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         JFXDepthManager.setDepth(PaneInfo, 5);
     }
     
     

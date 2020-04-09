@@ -1,104 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="901.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
-   <children>
-      <BorderPane fx:id="principalBorder" layoutX="-7.0" prefHeight="594.0" prefWidth="901.0">
-         <left>
-            <VBox prefHeight="594.0" prefWidth="213.0" style="-fx-background-color: #EBEBF9;" BorderPane.alignment="CENTER">
-               <children>
-                  <ImageView fitHeight="180.0" fitWidth="213.0" pickOnBounds="true" style="-fx-border-radius: 50%;">
+<BorderPane fx:id="principalBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="903.0" prefWidth="1288.0" stylesheets="@../css/maincontroller.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <left>
+      <VBox prefHeight="789.0" prefWidth="222.0" style="-fx-background-color: #EBEBF9;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton prefHeight="68.0" prefWidth="222.0" text="Acceuil">
+               <graphic>
+                  <FontAwesomeIconView fill="#00bcd4" glyphName="HOME" size="25.0" style="-fx-background-color: #fff;" />
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font name="Bell MT" size="25.0" />
+               </font></JFXButton>
+            <JFXButton layoutX="10.0" layoutY="223.0" prefHeight="68.0" prefWidth="222.0" text="Race">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true">
                      <image>
-                        <Image url="@../images/logo.png" />
+                        <Image url="@../images/BOUVIN.png" />
                      </image>
                   </ImageView>
-                  <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" onAction="#importRace" prefHeight="49.0" prefWidth="222.0" style="-fx-background-color: #EBEBF2;" styleClass="menu" stylesheets="@../css/maincontroller.css" text="Import Race">
-                     <graphic>
-                        <ImageView fitHeight="35.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/baseline_system_update_alt_black_18dp.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <padding>
-                        <Insets left="30.0" />
-                     </padding>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" prefHeight="49.0" prefWidth="222.0" style="-fx-background-color: #EBEBF2;" styleClass="menu" stylesheets="@../css/maincontroller.css" text="Fournisseurs">
-                     <graphic>
-                        <ImageView fitHeight="35.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/users.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <padding>
-                        <Insets left="30.0" />
-                     </padding>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" prefHeight="49.0" prefWidth="222.0" style="-fx-background-color: #EBEBF2;" styleClass="menu" stylesheets="@../css/maincontroller.css" text="evolutions">
-                     <graphic>
-                        <ImageView fitHeight="35.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/graph.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <padding>
-                        <Insets left="30.0" />
-                     </padding>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" prefHeight="49.0" prefWidth="222.0" style="-fx-background-color: #EBEBF2;" styleClass="menu" stylesheets="@../css/maincontroller.css" text="Controle">
-                     <graphic>
-                        <ImageView fitHeight="35.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/calendar.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <padding>
-                        <Insets left="30.0" />
-                     </padding>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </JFXButton>
-                  <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" prefHeight="49.0" prefWidth="222.0" style="-fx-background-color: #EBEBF2;" styleClass="menu" stylesheets="@../css/maincontroller.css" text="Notifications">
-                     <graphic>
-                        <ImageView fitHeight="35.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/chat.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <padding>
-                        <Insets left="30.0" />
-                     </padding>
-                  </JFXButton>
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets right="40.0" />
+               </padding>
+               <font>
+                  <Font name="Bell MT" size="25.0" />
+               </font></JFXButton>
+            <JFXButton layoutX="10.0" layoutY="274.0" onAction="#IimportRace" prefHeight="68.0" prefWidth="222.0" text="Import Race">
+               <graphic>
+                  <MaterialDesignIconView fill="#00bcd4" glyphName="ARROW_DOWN_BOLD_CIRCLE" size="25.0" text="" />
+               </graphic>
+               <font>
+                  <Font name="Bell MT" size="25.0" />
+               </font></JFXButton>
+            <JFXButton layoutX="10.0" layoutY="325.0" prefHeight="68.0" prefWidth="222.0" text="Evolution">
+               <graphic>
+                  <MaterialDesignIconView fill="#00bcd4" glyphName="CHART_BAR" size="25.0" />
+               </graphic>
+               <font>
+                  <Font name="Bell MT" size="25.0" />
+               </font></JFXButton>
+            <JFXButton layoutX="10.0" layoutY="376.0" prefHeight="68.0" prefWidth="222.0" text="Notification">
+               <graphic>
+                  <OctIconView fill="#00bcd4" glyphName="BELL" size="25.0" />
+               </graphic>
+               <font>
+                  <Font name="Bell MT" size="25.0" />
+               </font></JFXButton>
+            <VBox alignment="CENTER" prefHeight="217.0" prefWidth="205.0">
+               <children>
+                  <JFXButton prefHeight="68.0" prefWidth="222.0" text="Quelque chose" />
+                  <JFXButton layoutX="10.0" layoutY="93.0" prefHeight="68.0" prefWidth="222.0" text="Quelque chose" />
                </children>
             </VBox>
-         </left></BorderPane>
-   </children>
-   <padding>
-      <Insets left="30.0" />
-   </padding>
-   <VBox.margin>
-      <Insets />
-   </VBox.margin>
-</AnchorPane>
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="478.0" prefHeight="217.0" prefWidth="205.0">
+               <children>
+                  <JFXButton prefHeight="68.0" prefWidth="222.0" text="Utilisateurs">
+                     <graphic>
+                        <FontAwesomeIconView fill="#00bcd4" glyphName="GROUP" size="25.0" />
+                     </graphic>
+                     <font>
+                        <Font name="Bell MT" size="25.0" />
+                     </font></JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="93.0" prefHeight="68.0" prefWidth="222.0" text="Déconnecter">
+                     <graphic>
+                        <FontAwesomeIconView fill="#00bcd4" glyphName="SIGN_OUT" size="25.0" />
+                     </graphic>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="Bell MT" size="25.0" />
+                     </font></JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <Pane fx:id="paneImportRace" prefHeight="858.0" prefWidth="1083.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="802.0" prefWidth="1069.0">
+               <children>
+                  <Pane fx:id="paneInfo" layoutX="218.0" layoutY="37.0" prefHeight="654.0" prefWidth="634.0" style="-fx-background-color: #EBEBF9;">
+                     <children>
+                        <HBox alignment="CENTER" layoutX="-2.0" prefHeight="88.0" prefWidth="636.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="65.0" prefWidth="500.0" text="Import Race">
+                                 <font>
+                                    <Font name="Bell MT" size="39.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <JFXButton fx:id="suivant" layoutX="345.0" layoutY="539.0" onMouseClicked="#importBouvin2" prefHeight="31.0" prefWidth="190.0" style="-fx-background-color: #008B8B;" text="Suivant" textFill="WHITE">
+                           <font>
+                              <Font name="Bell MT Bold" size="21.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXTextField layoutX="132.0" layoutY="164.0" prefHeight="40.0" prefWidth="395.0" promptText="Prix par Kg(*)" unFocusColor="#742dd6" />
+                        <JFXTextField layoutX="132.0" layoutY="248.0" prefHeight="40.0" prefWidth="395.0" promptText="Fournisseur(*)" unFocusColor="#742dd6" />
+                        <JFXTextField layoutX="132.0" layoutY="332.0" prefHeight="40.0" prefWidth="395.0" promptText="Nombre de Bovin(*)" unFocusColor="#742dd6" />
+                        <JFXTextField layoutX="132.0" layoutY="425.0" prefHeight="40.0" prefWidth="395.0" promptText="Expected Evolution(*)" unFocusColor="#742dd6" />
+                        <JFXComboBox layoutX="209.0" layoutY="100.0" prefHeight="31.0" prefWidth="215.0" promptText="Race" unFocusColor="#742dd6" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+   </center>
+   <top>
+      <HBox prefHeight="113.0" prefWidth="1288.0" style="-fx-background-color: #000;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="114.0" prefWidth="181.0">
+               <children>
+                  <ImageView fitHeight="114.0" fitWidth="220.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/logo4.PNG" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   
+</BorderPane>

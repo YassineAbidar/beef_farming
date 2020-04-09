@@ -1,36 +1,17 @@
-/*
- * Empty Stylesheet file.
- */
 
-.mainFxmlClass {
-
-}
-/*.menu:hover {
-    -fx-scale-y: 1.03;
-    -fx-scale-x: 1.03;
-    -fx-background-color:#A52A2A;
-}*/
-.menu:hover{
-    /*-fx-background-radius: 22;*/
+.button:hover{
     -fx-font-weight:bold;
     -fx-background-color: white;
-    -fx-font-size:14;
     -fx-text-fill:  #00BCD4;
-    /*-fx-border-color:#2196f3;*/
     -fx-border-radius: 20;
     -fx-border-width: 3;
-    
 }
 
-.menu:pressed{
-    /*-fx-background-radius: 22;*/
+.button:pressed{
     -fx-font-weight:bold;
     -fx-background-color: white;
-    -fx-font-size:14;
     -fx-text-fill:  #00BCD4;
-    /*-fx-border-color:#2196f3;*/
     -fx-border-radius: 20;
     -fx-border-width: 3;
-    -fx-rotate:20;
 }
  

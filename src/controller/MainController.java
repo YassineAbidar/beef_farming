@@ -5,6 +5,8 @@
  */
 package controller;
 
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.effects.JFXDepthManager;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,36 +16,52 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 
 /**
  *
  * @author pc
  */
-public class MainController implements Initializable{
+public class MainController implements Initializable {
+    
     @FXML
     private BorderPane principalBorder;
-    
-  
+    @FXML
+    private Pane paneImportRace;
+    @FXML
+    private JFXButton suivant;
+    @FXML
+    private Pane paneInfo;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-  
+        paneImportRace.setVisible(false);
+          JFXDepthManager.setDepth(paneInfo, 5);
     }
     
-       @FXML
-     private void importRace(ActionEvent event) throws IOException {
-        AnchorPane root = null;
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ImportRace.fxml"));
-        root = loader.load();
-        principalBorder.setCenter(root);
-    }
-      @FXML
-     private void importBovin(ActionEvent event) throws IOException {
+    @FXML
+    private void importBouvin(ActionEvent event) throws IOException {
         AnchorPane root = null;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Bovin.fxml"));
         root = loader.load();
         principalBorder.setCenter(root);
     }
-   
+    
+    @FXML
+    private void IimportRace(ActionEvent event) throws IOException {
+        
+        paneImportRace.setVisible(true);
+        principalBorder.setCenter(paneImportRace);
+    }
+    
+    @FXML
+    private void importBouvin2(MouseEvent event) throws IOException {
+         paneImportRace.setVisible(false);
+          AnchorPane root = null;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Bovin.fxml"));
+        root = loader.load();
+        principalBorder.setCenter(root);
+    }
 }

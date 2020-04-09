@@ -5,13 +5,13 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane   fx:controller="controller.MainController" maxHeight="-Infinity"  maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="361.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="361.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <children>
       <JFXTextField focusColor="#0d1c4a" layoutX="14.0" layoutY="57.0" prefHeight="37.0" prefWidth="315.0" promptText="IdBoucle" text="nbr de bovins" unFocusColor="#7308ff" AnchorPane.bottomAnchor="318.0" AnchorPane.topAnchor="57.0" />
       <JFXTextField focusColor="#0d1c4a" layoutX="14.0" layoutY="119.0" prefHeight="25.0" prefWidth="315.0" promptText="IdBoucle" text="prix por Kg" unFocusColor="#7308ff" />
       <JFXTextField focusColor="#0d1c4a" layoutX="14.0" layoutY="193.0" prefHeight="25.0" prefWidth="315.0" promptText="IdBoucle" text="Fournisseur" unFocusColor="#7308ff" />
       <JFXTextField focusColor="#0d1c4a" layoutX="14.0" layoutY="252.0" prefHeight="25.0" prefWidth="315.0" promptText="IdBoucle" text="Expected Evolution" unFocusColor="#7308ff" />
-      <JFXButton  fx:id="suivant"  onAction="#importBovin" layoutX="223.0" layoutY="307.0" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #008B8B;" text="Suivant" />
+      <JFXButton fx:id="suivant" layoutX="223.0" layoutY="307.0" onMouseClicked="#importBouvin2" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #008B8B;" text="Suivant" />
       <ComboBox layoutX="97.0" layoutY="24.0" prefWidth="150.0" />
    </children>
 </AnchorPane>
