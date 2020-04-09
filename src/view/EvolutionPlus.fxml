@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="843.0" prefWidth="1328.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EvolutionPlusController">
+   <top>
+      <HBox prefHeight="221.0" prefWidth="1328.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="221.0" prefWidth="433.0">
+               <children>
+                  <JFXComboBox prefHeight="31.0" prefWidth="183.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXComboBox>
+                  <JFXComboBox layoutX="198.0" layoutY="105.0" prefHeight="31.0" prefWidth="205.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXComboBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="221.0" prefWidth="433.0">
+               <children>
+                  <JFXCheckBox />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="443.0" layoutY="10.0" prefHeight="221.0" prefWidth="465.0">
+               <children>
+                  <JFXRadioButton />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackedBarChart layoutX="46.0" layoutY="69.0" prefHeight="457.0" prefWidth="500.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </StackedBarChart>
+            <PieChart layoutX="683.0" layoutY="66.0" prefHeight="465.0" prefWidth="524.0" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

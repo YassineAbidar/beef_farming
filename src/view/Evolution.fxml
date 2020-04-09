@@ -1,10 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import java.net.URL?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="901.0" prefWidth="1085.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controller.EvolutionController">
+<AnchorPane id="AnchorPane" prefHeight="838.0" prefWidth="1294.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controller.EvolutionController">
     <stylesheets>
         <URL value="@/css/evolution.css" />
     </stylesheets>
+   <children>
+      <HBox alignment="CENTER" layoutX="76.0" layoutY="14.0" prefHeight="102.0" prefWidth="1085.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="62.0" prefWidth="641.0" text="Evolution De Race  &amp; Bovin">
+               <font>
+                  <Font name="Bell MT" size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Pane layoutX="674.0" layoutY="264.0" prefHeight="447.0" prefWidth="606.0">
+         <children>
+            <BarChart fx:id="ExpectedEvolutionGraphe" layoutY="1.0" prefHeight="447.0" prefWidth="606.0">
+              <xAxis>
+                <CategoryAxis fx:id="X1" label="Mois" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="Y1" label="Poids(KG)" side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </Pane>
+      <Pane layoutX="48.0" layoutY="264.0" prefHeight="447.0" prefWidth="606.0">
+         <children>
+            <BarChart fx:id="ReelEvolutiobGraphe" layoutX="-1.0" prefHeight="447.0" prefWidth="606.0">
+              <xAxis>
+                <CategoryAxis fx:id="X2" label="Mois" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="Y2" label="Poids(KG)" side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </Pane>
+      <HBox alignment="CENTER" layoutX="202.0" layoutY="180.0" prefHeight="62.0" prefWidth="304.0">
+         <children>
+            <Label alignment="CENTER" text="Reel Evolution ">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="825.0" layoutY="180.0" prefHeight="62.0" prefWidth="304.0">
+         <children>
+            <Label alignment="CENTER" text="Expected Evolution">
+               <font>
+                  <Font name="Bell MT" size="33.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <JFXButton layoutX="1009.0" layoutY="738.0" onAction="#appelauthorEvolution" prefHeight="31.0" prefWidth="173.0" text="Suivant" />
+   </children>
 </AnchorPane>

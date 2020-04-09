@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="principalBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="903.0" prefWidth="1288.0" stylesheets="@../css/maincontroller.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+<BorderPane fx:id="principalBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="903.0" prefWidth="1546.0" stylesheets="@../css/maincontroller.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <left>
       <VBox prefHeight="789.0" prefWidth="222.0" style="-fx-background-color: #EBEBF9;" BorderPane.alignment="CENTER">
          <children>
@@ -55,7 +55,7 @@
                <font>
                   <Font name="Bell MT" size="25.0" />
                </font></JFXButton>
-            <JFXButton layoutX="10.0" layoutY="325.0" prefHeight="68.0" prefWidth="222.0" text="Evolution">
+            <JFXButton layoutX="10.0" layoutY="325.0" onAction="#appelEvolutionView" prefHeight="68.0" prefWidth="222.0" text="Evolution">
                <graphic>
                   <MaterialDesignIconView fill="#00bcd4" glyphName="CHART_BAR" size="25.0" />
                </graphic>
@@ -100,9 +100,9 @@
       </VBox>
    </left>
    <center>
-      <Pane fx:id="paneImportRace" prefHeight="858.0" prefWidth="1083.0" BorderPane.alignment="CENTER">
+      <Pane fx:id="paneImportRace" prefHeight="789.0" prefWidth="1231.0" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane layoutX="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="802.0" prefWidth="1069.0">
+            <AnchorPane layoutX="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="802.0" prefWidth="1328.0">
                <children>
                   <Pane fx:id="paneInfo" layoutX="218.0" layoutY="37.0" prefHeight="654.0" prefWidth="634.0" style="-fx-background-color: #EBEBF9;">
                      <children>
@@ -139,7 +139,7 @@
                <children>
                   <ImageView fitHeight="114.0" fitWidth="220.0" pickOnBounds="true">
                      <image>
-                        <Image url="@../images/logo4.PNG" />
+                        <Image url="@../images/logoKouri.png" />
                      </image>
                   </ImageView>
                </children>

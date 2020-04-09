@@ -41,7 +41,6 @@ public class MainController implements Initializable {
           JFXDepthManager.setDepth(paneInfo, 5);
     }
     
-    @FXML
     private void importBouvin(ActionEvent event) throws IOException {
         AnchorPane root = null;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Bovin.fxml"));
@@ -59,8 +58,16 @@ public class MainController implements Initializable {
     @FXML
     private void importBouvin2(MouseEvent event) throws IOException {
          paneImportRace.setVisible(false);
-          AnchorPane root = null;
+         AnchorPane root = null;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Bovin.fxml"));
+        root = loader.load();
+        principalBorder.setCenter(root);
+    }
+
+    @FXML
+    private void appelEvolutionView(ActionEvent event) throws IOException {
+          AnchorPane root = null;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Evolution.fxml"));
         root = loader.load();
         principalBorder.setCenter(root);
     }
