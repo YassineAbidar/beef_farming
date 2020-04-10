@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="BorderPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="797.0" prefWidth="1181.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EvolutionController">
+<BorderPane fx:id="BorderPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="819.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EvolutionController">
    <top>
       <HBox alignment="CENTER" prefHeight="132.0" prefWidth="1181.0" BorderPane.alignment="CENTER">
          <children>
@@ -24,9 +24,9 @@
    <center>
       <Pane prefHeight="644.0" prefWidth="1181.0" BorderPane.alignment="CENTER">
          <children>
-            <Pane layoutX="94.0" layoutY="125.0" prefHeight="416.0" prefWidth="462.0">
+            <Pane layoutX="56.0" layoutY="125.0" prefHeight="359.0" prefWidth="379.0">
                <children>
-                  <BarChart fx:id="ExpectedEvolutionGraphe" layoutY="-1.0" prefHeight="424.0" prefWidth="463.0">
+                  <BarChart fx:id="ExpectedEvolutionGraphe" layoutX="-50.0" layoutY="28.0" prefHeight="331.0" prefWidth="384.0">
                      <xAxis>
                         <CategoryAxis fx:id="X1" side="BOTTOM" />
                      </xAxis>
@@ -36,9 +36,9 @@
                   </BarChart>
                </children>
             </Pane>
-            <Pane layoutX="615.0" layoutY="125.0" prefHeight="429.0" prefWidth="460.0">
+            <Pane layoutX="416.0" layoutY="178.0" prefHeight="306.0" prefWidth="401.0">
                <children>
-                  <BarChart fx:id="ReelEvolutiobGraphe" layoutX="-1.0" prefHeight="427.0" prefWidth="463.0">
+                  <BarChart fx:id="ReelEvolutiobGraphe" layoutX="-5.0" layoutY="-21.0" prefHeight="313.0" prefWidth="412.0">
                     <xAxis>
                       <CategoryAxis fx:id="X2" side="BOTTOM" />
                     </xAxis>
@@ -48,26 +48,23 @@
                   </BarChart>
                </children>
             </Pane>
-            <HBox alignment="CENTER" layoutX="162.0" layoutY="25.0" prefHeight="75.0" prefWidth="394.0">
+            <HBox alignment="CENTER" layoutX="14.0" layoutY="40.0" prefHeight="75.0" prefWidth="394.0">
                <children>
                   <Label text="Reel Evolution" />
                </children>
             </HBox>
-            <HBox alignment="CENTER" layoutX="670.0" layoutY="25.0" prefHeight="75.0" prefWidth="394.0">
+            <HBox alignment="CENTER" layoutX="425.0" layoutY="25.0" prefHeight="75.0" prefWidth="394.0">
                <children>
                   <Label text="Expected Evoulution" />
                </children>
             </HBox>
-            <HBox alignment="CENTER" layoutX="632.0" layoutY="571.0" prefHeight="55.0" prefWidth="352.0">
-               <children>
-                  <Label prefHeight="39.0" prefWidth="290.0" text="Pour Plus De Graphe">
-                     <font>
-                        <Font name="Bell MT" size="32.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-            <FontAwesomeIconView fill="#00bcd4" glyphName="ARROW_RIGHT" layoutX="1013.0" layoutY="603.0" onMouseClicked="#appelEvolutionPlus" scaleX="2.5" scaleY="1.8" size="30" />
+            <HBox alignment="CENTER" layoutX="632.0" layoutY="571.0" prefHeight="55.0" prefWidth="352.0" />
+            <FontAwesomeIconView fill="#00bcd4" glyphName="ARROW_RIGHT" layoutX="563.0" layoutY="512.0" onMouseClicked="#appelEvolutionPlus" scaleX="2.5" scaleY="1.8" size="30" />
+            <Label layoutX="238.0" layoutY="482.0" prefHeight="39.0" prefWidth="290.0" text="Pour Plus De Graphe">
+               <font>
+                  <Font name="Bell MT" size="32.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </center>

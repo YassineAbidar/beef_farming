@@ -20,6 +20,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 
 /**
  *
@@ -35,10 +36,16 @@ public class MainController implements Initializable {
     private JFXButton suivant;
     @FXML
     private Pane paneInfo;
+    @FXML
+    private AnchorPane hboxMenu;
+    @FXML
+    private VBox vboxMenu;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         paneImportRace.setVisible(false);
           JFXDepthManager.setDepth(paneInfo, 5);
+           JFXDepthManager.setDepth(vboxMenu, 5);
+          JFXDepthManager.setDepth(hboxMenu, 3);
     }
     
     private void importBouvin(ActionEvent event) throws IOException {
@@ -68,6 +75,14 @@ public class MainController implements Initializable {
     private void appelEvolutionView(ActionEvent event) throws IOException {
           BorderPane root = null;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Evolution.fxml"));
+        root = loader.load();
+        principalBorder.setCenter(root);
+    }
+    @FXML
+    private void  controleMensuel(ActionEvent event) throws IOException {
+         paneImportRace.setVisible(false);
+         AnchorPane root = null;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ControleMensuel.fxml"));
         root = loader.load();
         principalBorder.setCenter(root);
     }
