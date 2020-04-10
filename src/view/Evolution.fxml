@@ -1,72 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import java.net.URL?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.chart.BarChart?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="838.0" prefWidth="1294.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controller.EvolutionController">
-    <stylesheets>
-        <URL value="@/css/evolution.css" />
-    </stylesheets>
-   <children>
-      <HBox alignment="CENTER" layoutX="76.0" layoutY="14.0" prefHeight="102.0" prefWidth="1085.0">
+<BorderPane fx:id="BorderPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="797.0" prefWidth="1181.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EvolutionController">
+   <top>
+      <HBox alignment="CENTER" prefHeight="132.0" prefWidth="1181.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="62.0" prefWidth="641.0" text="Evolution De Race  &amp; Bovin">
-               <font>
-                  <Font name="Bell MT" size="50.0" />
-               </font>
-            </Label>
-         </children>
-      </HBox>
-      <Pane layoutX="674.0" layoutY="264.0" prefHeight="447.0" prefWidth="606.0">
-         <children>
-            <BarChart fx:id="ExpectedEvolutionGraphe" layoutY="1.0" prefHeight="447.0" prefWidth="606.0">
-              <xAxis>
-                <CategoryAxis fx:id="X1" label="Mois" side="BOTTOM" />
-              </xAxis>
-              <yAxis>
-                <NumberAxis fx:id="Y1" label="Poids(KG)" side="LEFT" />
-              </yAxis>
-            </BarChart>
-         </children>
-      </Pane>
-      <Pane layoutX="48.0" layoutY="264.0" prefHeight="447.0" prefWidth="606.0">
-         <children>
-            <BarChart fx:id="ReelEvolutiobGraphe" layoutX="-1.0" prefHeight="447.0" prefWidth="606.0">
-              <xAxis>
-                <CategoryAxis fx:id="X2" label="Mois" side="BOTTOM" />
-              </xAxis>
-              <yAxis>
-                <NumberAxis fx:id="Y2" label="Poids(KG)" side="LEFT" />
-              </yAxis>
-            </BarChart>
-         </children>
-      </Pane>
-      <HBox alignment="CENTER" layoutX="202.0" layoutY="180.0" prefHeight="62.0" prefWidth="304.0">
-         <children>
-            <Label alignment="CENTER" text="Reel Evolution ">
-               <font>
-                  <Font size="33.0" />
-               </font>
-            </Label>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER" layoutX="825.0" layoutY="180.0" prefHeight="62.0" prefWidth="304.0">
-         <children>
-            <Label alignment="CENTER" text="Expected Evolution">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="57.0" prefWidth="440.0" text="Evolution Global Des Races ">
                <font>
                   <Font name="Bell MT" size="33.0" />
                </font>
             </Label>
+         </children></HBox>
+   </top>
+   <center>
+      <Pane prefHeight="644.0" prefWidth="1181.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="94.0" layoutY="125.0" prefHeight="416.0" prefWidth="462.0">
+               <children>
+                  <BarChart fx:id="ExpectedEvolutionGraphe" layoutY="-1.0" prefHeight="424.0" prefWidth="463.0">
+                     <xAxis>
+                        <CategoryAxis fx:id="X1" side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="Y1" prefHeight="419.0" prefWidth="42.0" side="LEFT" />
+                     </yAxis>
+                  </BarChart>
+               </children>
+            </Pane>
+            <Pane layoutX="615.0" layoutY="125.0" prefHeight="429.0" prefWidth="460.0">
+               <children>
+                  <BarChart fx:id="ReelEvolutiobGraphe" layoutX="-1.0" prefHeight="427.0" prefWidth="463.0">
+                    <xAxis>
+                      <CategoryAxis fx:id="X2" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="Y2" prefHeight="419.0" prefWidth="42.0" side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+               </children>
+            </Pane>
+            <HBox alignment="CENTER" layoutX="162.0" layoutY="25.0" prefHeight="75.0" prefWidth="394.0">
+               <children>
+                  <Label text="Reel Evolution" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="670.0" layoutY="25.0" prefHeight="75.0" prefWidth="394.0">
+               <children>
+                  <Label text="Expected Evoulution" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="632.0" layoutY="571.0" prefHeight="55.0" prefWidth="352.0">
+               <children>
+                  <Label prefHeight="39.0" prefWidth="290.0" text="Pour Plus De Graphe">
+                     <font>
+                        <Font name="Bell MT" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <FontAwesomeIconView fill="#00bcd4" glyphName="ARROW_RIGHT" layoutX="1013.0" layoutY="603.0" onMouseClicked="#appelEvolutionPlus" scaleX="2.5" scaleY="1.8" size="30" />
          </children>
-      </HBox>
-      <JFXButton layoutX="1009.0" layoutY="738.0" onAction="#appelauthorEvolution" prefHeight="31.0" prefWidth="173.0" text="Suivant" />
-   </children>
-</AnchorPane>
+      </Pane>
+   </center>
+</BorderPane>

@@ -66,7 +66,7 @@ public class MainController implements Initializable {
 
     @FXML
     private void appelEvolutionView(ActionEvent event) throws IOException {
-          AnchorPane root = null;
+          BorderPane root = null;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Evolution.fxml"));
         root = loader.load();
         principalBorder.setCenter(root);

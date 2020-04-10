@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXCheckBox?>
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXRadioButton?>
 <?import javafx.geometry.Insets?>
@@ -8,54 +7,59 @@
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="843.0" prefWidth="1328.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EvolutionPlusController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="797.0" prefWidth="1118.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EvolutionPlusController">
    <top>
-      <HBox prefHeight="221.0" prefWidth="1328.0">
+      <HBox fx:id="HboxHeader" prefHeight="221.0" prefWidth="1328.0">
          <children>
-            <HBox alignment="CENTER" prefHeight="221.0" prefWidth="433.0">
+            <VBox alignment="CENTER" prefHeight="221.0" prefWidth="458.0">
                <children>
-                  <JFXComboBox prefHeight="31.0" prefWidth="183.0">
-                     <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </HBox.margin>
+                  <JFXRadioButton fx:id="importRaceRadioButton" text="Import Race">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="impot" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="raceRadioButton" prefHeight="21.0" prefWidth="108.0" text="Race" toggleGroup="$impot" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="221.0" prefWidth="458.0">
+               <children>
+                  <JFXComboBox fx:id="importRaceCombobox" disable="true" prefHeight="31.0" prefWidth="227.0" promptText="Import Race">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
                   </JFXComboBox>
-                  <JFXComboBox layoutX="198.0" layoutY="105.0" prefHeight="31.0" prefWidth="205.0">
-                     <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </HBox.margin>
-                  </JFXComboBox>
+                  <JFXComboBox fx:id="raceComboBox" layoutX="204.0" layoutY="105.0" prefHeight="31.0" prefWidth="223.0" promptText="Tout Les Races" />
                </children>
-            </HBox>
-            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="221.0" prefWidth="433.0">
+            </VBox>
+            <VBox alignment="CENTER" layoutX="468.0" layoutY="10.0" prefHeight="221.0" prefWidth="458.0">
                <children>
-                  <JFXCheckBox />
+                  <JFXComboBox fx:id="diagrameComboBox" prefHeight="31.0" prefWidth="218.0" promptText="Diagramme" />
                </children>
-            </HBox>
-            <HBox alignment="CENTER" layoutX="443.0" layoutY="10.0" prefHeight="221.0" prefWidth="465.0">
-               <children>
-                  <JFXRadioButton />
-               </children>
-            </HBox>
+            </VBox>
          </children>
       </HBox>
    </top>
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <StackedBarChart layoutX="46.0" layoutY="69.0" prefHeight="457.0" prefWidth="500.0">
+            <StackedBarChart fx:id="ImportRaceGraphe" layoutX="22.0" layoutY="26.0" prefHeight="457.0" prefWidth="502.0">
               <xAxis>
-                <CategoryAxis side="BOTTOM" />
+                <CategoryAxis side="BOTTOM" fx:id="x1" />
               </xAxis>
               <yAxis>
-                <NumberAxis side="LEFT" />
+                <NumberAxis fx:id="y1" side="LEFT" />
               </yAxis>
             </StackedBarChart>
-            <PieChart layoutX="683.0" layoutY="66.0" prefHeight="465.0" prefWidth="524.0" />
+            <PieChart fx:id="PieChartGraphe" layoutX="544.0" layoutY="16.0" prefHeight="477.0" prefWidth="544.0" />
          </children>
       </Pane>
    </center>
