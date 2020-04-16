@@ -8,15 +8,13 @@ package controller;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
-import javafx.scene.input.ContextMenuEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 
@@ -28,19 +26,16 @@ import javafx.scene.layout.BorderPane;
 public class EvolutionController implements Initializable {
 
     @FXML
-    private BarChart<String, Double> ExpectedEvolutionGraphe;
+    private LineChart<?, ?> lineChart;
+
     @FXML
-    private NumberAxis Y1;
+    private CategoryAxis x;
+
     @FXML
-    private CategoryAxis X1;
-    @FXML
-    private BarChart<String, Double> ReelEvolutiobGraphe;
-    @FXML
-    private NumberAxis Y2;
-    @FXML
-    private CategoryAxis X2;
+    private NumberAxis y;
     @FXML
     private BorderPane BorderPrincipal;
+    
 
     /**
      * Initializes the controller class.
@@ -49,15 +44,36 @@ public class EvolutionController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
          XYChart.Series series= new XYChart.Series<>();
-        series.getData().add(new XYChart.Data<>("Race1", 20));
-        series.getData().add(new XYChart.Data<>("Race2", 21.3));
-        series.getData().add(new XYChart.Data<>("RACE3", 19.75));
-        ExpectedEvolutionGraphe.getData().addAll(series);
+        series.getData().add(new XYChart.Data<>("mois1", 20));
+        series.getData().add(new XYChart.Data<>("mois2", 50));
+        series.getData().add(new XYChart.Data<>("mois3", 20));
+        series.getData().add(new XYChart.Data<>("mois4", 30));
+        series.getData().add(new XYChart.Data<>("mois5", 70));
+        series.getData().add(new XYChart.Data<>("mois6", 20));
+        series.getData().add(new XYChart.Data<>("mois7", 100));
+          series.getData().add(new XYChart.Data<>("mois8", 20));
+        series.getData().add(new XYChart.Data<>("mois9", 30));
+        series.getData().add(new XYChart.Data<>("mois10", 70));
+        series.getData().add(new XYChart.Data<>("mois11", 122));
+        series.getData().add(new XYChart.Data<>("mois12", 190));
+        series.setName("Production attendue");
+        
+       
           XYChart.Series series1= new XYChart.Series<>();
-        series1.getData().add(new XYChart.Data<>("Race1", 19.6));
-        series1.getData().add(new XYChart.Data<>("Race2", 22.4));
-        series1.getData().add(new XYChart.Data<>("RACE3", 20));
-        ReelEvolutiobGraphe.getData().addAll(series1);
+        series1.getData().add(new XYChart.Data<>("mois1", 19.6));
+        series1.getData().add(new XYChart.Data<>("mois2", 22.4));
+        series1.getData().add(new XYChart.Data<>("mois3", 30));
+        series1.getData().add(new XYChart.Data<>("mois4", 34));
+        series1.getData().add(new XYChart.Data<>("mois5", 40));
+        series1.getData().add(new XYChart.Data<>("mois6", 45));
+        series1.getData().add(new XYChart.Data<>("mois7", 50));
+        series1.getData().add(new XYChart.Data<>("mois8", 59));
+        series1.getData().add(new XYChart.Data<>("mois9", 100));
+        series1.getData().add(new XYChart.Data<>("mois10", 122));
+        series1.getData().add(new XYChart.Data<>("mois11", 130));
+        series1.getData().add(new XYChart.Data<>("mois12", 150));
+         series1.setName(" Production réelle");
+        lineChart.getData().addAll(series,series1);
     }    
 
     @FXML

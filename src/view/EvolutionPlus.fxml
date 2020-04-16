@@ -56,7 +56,7 @@
                 <CategoryAxis side="BOTTOM" fx:id="x1" />
               </xAxis>
               <yAxis>
-                <NumberAxis fx:id="y1" side="LEFT" />
+                <NumberAxis fx:id="y1" label="Poids" side="LEFT" />
               </yAxis>
             </StackedBarChart>
             <PieChart fx:id="PieChartGraphe" layoutX="427.0" layoutY="14.0" prefHeight="362.0" prefWidth="390.0" />

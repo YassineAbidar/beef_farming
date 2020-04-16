@@ -5,9 +5,13 @@
  */
 package controller;
 
+import com.jfoenix.effects.JFXDepthManager;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 
 /**
  *
@@ -15,10 +19,19 @@ import javafx.fxml.Initializable;
  */
 public class ControleMensuelController implements Initializable{
 
+    @FXML
+    private BorderPane controleMensuelBorder;
+    @FXML
+    private Pane paneImportRace;
+    @FXML
+    private Pane paneInfo;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                  JFXDepthManager.setDepth(paneInfo, 5);
+
     }
+    
     
     
 }

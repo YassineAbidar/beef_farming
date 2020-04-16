@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXComboBox?>
-<?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import de.jensd.fx.glyphs.octicons.OctIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="principalBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="711.0" prefWidth="1039.0" stylesheets="@../css/maincontroller.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+<BorderPane fx:id="principalBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="711.0" prefWidth="1100.0" stylesheets="@../css/maincontroller.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <left>
       <VBox fx:id="vboxMenu" nodeOrientation="LEFT_TO_RIGHT" prefHeight="685.0" prefWidth="277.0" style="-fx-background-color: #EBEBF9;" BorderPane.alignment="CENTER">
          <children>
@@ -28,7 +24,7 @@
                   <Image url="@../images/393f52da-1fe2-4cdb-84be-0489dcc6cc32_200x200.png" />
                </image>
             </ImageView>
-            <Line endX="88.5" startX="-100.0" stroke="#153f46">
+            <Line endX="82.29289245605469" endY="1.4497535228729248" startX="-100.0" stroke="#153f46">
                <VBox.margin>
                   <Insets left="40.0" />
                </VBox.margin>
@@ -66,7 +62,7 @@
                <padding>
                   <Insets left="50.0" />
                </padding></JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="274.0" onAction="#IimportRace" prefHeight="56.0" prefWidth="279.0" text="Import Race">
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="274.0" onAction="#importRace" prefHeight="56.0" prefWidth="279.0" text="Importer une race">
                <graphic>
                   <MaterialDesignIconView fill="#00bcd4" glyphName="ARROW_DOWN_BOLD_CIRCLE" size="25.0" text="" />
                </graphic>
@@ -94,7 +90,7 @@
                </padding></JFXButton>
             <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" onAction="#controleMensuel" prefHeight="54.0" prefWidth="277.0" text="Controle Mensuel">
                <graphic>
-                  <OctIconView fill="#00bcd4" glyphName="BELL" size="25.0" />
+                  <OctIconView fill="#00bcd4" glyphName="CALENDAR" size="25.0" />
                </graphic>
                <font>
                   <Font name="Bell MT" size="18.0" />
@@ -116,7 +112,7 @@
                <padding>
                   <Insets left="50.0" />
                </padding></JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" prefHeight="52.0" prefWidth="277.0" text="Utilisateurs">
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" onAction="#showUtilisateur" prefHeight="52.0" prefWidth="277.0" text="Utilisateurs">
                <graphic>
                   <FontAwesomeIconView fill="#00bcd4" glyphName="GROUP" size="25.0" />
                </graphic>
@@ -130,7 +126,7 @@
                   <Insets left="50.0" />
                </padding>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" prefHeight="51.0" prefWidth="277.0" text="Déconnecter">
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" prefHeight="51.0" prefWidth="277.0" text="Se Déconnecter">
                <graphic>
                   <FontAwesomeIconView fill="#00bcd4" glyphName="SIGN_OUT" size="25.0" />
                </graphic>
@@ -149,35 +145,9 @@
    </left>
    <center>
       <Pane fx:id="paneImportRace" prefHeight="705.0" prefWidth="978.0" BorderPane.alignment="CENTER">
-         <children>
-            <AnchorPane layoutX="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="819.0">
-               <children>
-                  <Pane fx:id="paneInfo" layoutX="110.0" layoutY="82.0" prefHeight="556.0" prefWidth="522.0" style="-fx-background-color: #EBEBF9;" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="187.0" AnchorPane.topAnchor="82.0">
-                     <children>
-                        <HBox alignment="CENTER" layoutX="-2.0" prefHeight="88.0" prefWidth="511.0">
-                           <children>
-                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="65.0" prefWidth="500.0" text="Import Race">
-                                 <font>
-                                    <Font name="Bell MT" size="39.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <JFXButton fx:id="suivant" layoutX="297.0" layoutY="424.0" onMouseClicked="#importBouvin2" prefHeight="31.0" prefWidth="190.0" style="-fx-background-color: #008B8B;" text="Suivant" textFill="WHITE">
-                           <font>
-                              <Font name="Bell MT Bold" size="21.0" />
-                           </font>
-                        </JFXButton>
-                        <JFXTextField layoutX="79.0" layoutY="140.0" prefHeight="40.0" prefWidth="395.0" promptText="Prix par Kg(*)" unFocusColor="#742dd6" />
-                        <JFXTextField layoutX="65.0" layoutY="215.0" prefHeight="40.0" prefWidth="395.0" promptText="Fournisseur(*)" unFocusColor="#742dd6" />
-                        <JFXTextField layoutX="65.0" layoutY="291.0" prefHeight="40.0" prefWidth="395.0" promptText="Nombre de Bovin(*)" unFocusColor="#742dd6" />
-                        <JFXTextField layoutX="79.0" layoutY="358.0" prefHeight="40.0" prefWidth="395.0" promptText="Expected Evolution(*)" unFocusColor="#742dd6" />
-                        <JFXComboBox layoutX="155.0" layoutY="80.0" prefHeight="31.0" prefWidth="215.0" promptText="Race" unFocusColor="#742dd6" />
-                     </children>
-                  </Pane>
-               </children>
-            </AnchorPane>
-         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
       </Pane>
    </center>
    <top>

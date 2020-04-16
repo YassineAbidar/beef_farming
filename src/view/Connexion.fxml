@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="principeBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="559.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ConnexionController">
+   <center>
+      <Pane prefHeight="543.0" prefWidth="552.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="-7.0" prefHeight="540.0" prefWidth="568.0" style="-fx-background-color: #00bfff;">
+               <children>
+                  <JFXPasswordField fx:id="password" focusColor="#fcfcfc" layoutX="137.0" layoutY="297.0" prefHeight="27.0" prefWidth="315.0" promptText="Password" unFocusColor="#fcfcfc">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXButton fx:id="main" layoutX="393.0" layoutY="386.0" onAction="#main" prefHeight="34.0" prefWidth="111.0" style="-fx-background-color: #ffffff;" text="connexion" textFill="#141212" />
+                  <JFXTextField fx:id="login" focusColor="#eff1f5" layoutX="139.0" layoutY="204.0" prefHeight="38.0" prefWidth="310.0" promptText="Login" unFocusColor="#eeeaea">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label layoutX="45.0" layoutY="420.0" prefHeight="40.0" prefWidth="325.0" text="pour l' ">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink layoutX="116.0" layoutY="423.0" onAction="#inscription" prefHeight="35.0" prefWidth="132.0" text="inscription" textFill="#ee014c">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Hyperlink>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="102.0" layoutY="231.0" size="25" wrappingWidth="19.64285659790039" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="UNLOCK_ALT" layoutX="104.0" layoutY="318.0" size="25" wrappingWidth="16.071428298950195" />
+                  <ImageView fitHeight="157.0" fitWidth="224.0" layoutX="168.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/gigBlue.gif" />
+                     </image>
+                  </ImageView>
+                  
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="principeBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="568.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InscriptionController">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="540.0" prefWidth="568.0" style="-fx-background-color: #00bfff;">
+               <children>
+                  <JFXPasswordField fx:id="password" focusColor="#fcfcfc" layoutX="108.0" layoutY="328.0" prefHeight="42.0" prefWidth="349.0" promptText="Password" unFocusColor="#fcfcfc">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXButton layoutX="398.0" layoutY="477.0" onAction="#saveUser" prefHeight="34.0" prefWidth="111.0" style="-fx-background-color: #ffffff;" text="inscription" textFill="#141212" />
+                  <JFXTextField fx:id="email" focusColor="#eff1f5" layoutX="107.0" layoutY="277.0" prefHeight="38.0" prefWidth="350.0" promptText="Email" unFocusColor="#eeeaea">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXComboBox fx:id="userComboBox" focusColor="#eeeeee" layoutX="185.0" layoutY="60.0" prefHeight="31.0" prefWidth="196.0" promptText="admin" unFocusColor="WHITE" />
+                  <JFXTextField fx:id="prenom" focusColor="#eff1f5" layoutX="108.0" layoutY="175.0" prefHeight="38.0" prefWidth="352.0" promptText="Prenom" unFocusColor="#eeeaea">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="nom" focusColor="#eff1f5" layoutX="108.0" layoutY="121.0" onMouseClicked="#EffaceIcon" prefHeight="38.0" prefWidth="353.0" promptText="Nom" unFocusColor="#eeeaea">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="previous" layoutX="14.0" layoutY="14.0" onAction="#connexion" prefHeight="54.0" prefWidth="104.0" text=" ">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" scaleX="1.5" scaleY="1.3" size="30" wrappingWidth="17.285714149475098" />
+                     </graphic></JFXButton>
+                  <JFXTextField fx:id="login" focusColor="#eff1f5" layoutX="106.0" layoutY="225.0" prefHeight="38.0" prefWidth="353.0" promptText="Login" unFocusColor="#eeeaea">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="confirmPasword" focusColor="#fcfcfc" layoutX="108.0" layoutY="391.0" prefHeight="40.0" prefWidth="346.0" promptText="Confirm Password" unFocusColor="#fcfcfc">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <MaterialDesignIconView fx:id="icNom" fill="#e73d3d" glyphName="ALERT_OCTAGON" layoutX="461.0" layoutY="168.0" size="25" visible="false" />
+                  <MaterialDesignIconView fx:id="icPrenom" fill="#e73d3d" glyphName="ALERT_OCTAGON" layoutX="461.0" layoutY="222.0" size="25" visible="false" />
+                  <MaterialDesignIconView fx:id="icnLogin" fill="#e73d3d" glyphName="ALERT_OCTAGON" layoutX="461.0" layoutY="272.0" size="25" visible="false" />
+                  <MaterialDesignIconView fx:id="iconEmail" fill="#e73d3d" glyphName="ALERT_OCTAGON" layoutX="459.0" layoutY="324.0" size="25" visible="false" />
+                  <MaterialDesignIconView fx:id="iconPassword" fill="#e73d3d" glyphName="ALERT_OCTAGON" layoutX="459.0" layoutY="379.0" size="25" visible="false" />
+                  <MaterialDesignIconView fx:id="iconConfirmPass" fill="#e73d3d" glyphName="ALERT_OCTAGON" layoutX="459.0" layoutY="440.0" size="25" visible="false" />
+                   
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

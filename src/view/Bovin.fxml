@@ -12,13 +12,13 @@
    <children>
       <Pane fx:id="paneImportRace" prefHeight="901.0" prefWidth="1083.0" AnchorPane.bottomAnchor="-216.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-264.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane layoutX="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="901.0" prefWidth="1086.0">
+            <AnchorPane layoutX="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="901.0" prefWidth="819.0">
                <children>
-                  <Pane fx:id="PaneInfo" layoutX="136.0" layoutY="142.0" prefHeight="458.0" prefWidth="535.0" style="-fx-background-color: #EBEBF9;">
+                  <Pane fx:id="PaneInfo" layoutX="136.0" layoutY="142.0" prefHeight="458.0" prefWidth="558.0" style="-fx-background-color: #EBEBF9;" AnchorPane.bottomAnchor="301.0" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="142.0">
                      <children>
                         <HBox alignment="CENTER" layoutX="-2.0" prefHeight="88.0" prefWidth="535.0">
                            <children>
-                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="65.0" prefWidth="500.0" text="Import Bovin">
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="65.0" prefWidth="500.0" text="Importer une bovin">
                                  <font>
                                     <Font name="Bell MT" size="39.0" />
                                  </font>

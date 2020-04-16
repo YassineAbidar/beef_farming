@@ -9,59 +9,45 @@ package dataBase;
  *
  * @author pc
  */
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-
 public class ConnectBd {
-//    private static final String DATABASE_URL = "jdbc:mysql://localhost/easy_stock";
-//    private static final String DATABASE_USERNAME = "root";
-//    private static final String DATABASE_PASSWORD = "";
-//    private  static final String  jdbcDriver = "com.mysql.jdbc.Driver";
-//     public static Connection connection = null;
-//
-//    public  ConnectBd() {   
-//    }
-//    
-//    public static void getConnexion() throws Exception {
-//          try {
-//              
-//             Class.forName(jdbcDriver);
-//             connection = DriverManager.getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
-//             
-//            System.out.println("succès Connexion");
-//            
-//        } catch (Exception e) {
-//          
-//            printException(e);
-//        }
-//    }
-//
-//    public static void printException(Exception e) {
-//       
-//               System.out.println("Échec de la connexion");
-//    }
-//    
-//     public static void close() throws SQLException {
-//              connection.close();
-//              System.out.println("data base closed");
-//       
-//    }
-    static Connection con = null;
 
-    public static Connection getconnection() {
+    private static final String DATABASE_URL = "jdbc:mysql://localhost/beef_farming";
+    private static final String DATABASE_USERNAME = "root";
+    private static final String DATABASE_PASSWORD = "";
+    private static final String jdbcDriver = "com.mysql.jdbc.Driver";
+    public static Connection connection = null;
+
+    public ConnectBd() {
+    }
+
+    public static Connection getConnexion() throws Exception {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://localhost/beef_farming_db";
-           con = DriverManager.getConnection(url, "root", "");
-            System.out.println("connected");
+
+            Class.forName(jdbcDriver);
+            connection = DriverManager.getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
+            System.out.println("succès Connexion");
+            return connection;
+            
         } catch (Exception e) {
-            System.out.println("walo am3lam");
-            System.out.println(e.getMessage());
+
             System.out.println(e.getLocalizedMessage());
+            return null;
         }
-        return con;
-}
+    }
+
+    public static void printException(Exception e) {
+
+        System.out.println("Échec de la connexion");
+    }
+
+    public static void close() throws SQLException {
+        connection.close();
+        System.out.println("data base closed");
+
+    }
+
 }

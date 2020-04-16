@@ -19,11 +19,10 @@ public class Bovin {
     private int age;
     private String nom;
     private List<ControleMensuel> controleMensuels;
-
     public long getId() {
         return id;
     }
-
+    
     public void setId(long id) {
         this.id = id;
     }
@@ -31,11 +30,9 @@ public class Bovin {
     public long getIdBoucle() {
         return idBoucle;
     }
-
     public void setIdBoucle(long idBoucle) {
         this.idBoucle = idBoucle;
     }
-
     public int getAge() {
         return age;
     }

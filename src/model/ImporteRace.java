@@ -22,7 +22,7 @@ public class ImporteRace {
     private BigDecimal prixTotale;
     private long nombreBovins;
     private Race race;
-    private ExpectedEvolution expectedEvolution;
+    private List<ExpectedEvolution> expectedEvolution;
 
     public long getId() {
         return id;
@@ -88,13 +88,14 @@ public class ImporteRace {
         this.race = race;
     }
 
-    public ExpectedEvolution getExpectedEvolution() {
+    public List<ExpectedEvolution> getExpectedEvolution() {
         return expectedEvolution;
     }
 
-    public void setExpectedEvolution(ExpectedEvolution expectedEvolution) {
+    public void setExpectedEvolution(List<ExpectedEvolution> expectedEvolution) {
         this.expectedEvolution = expectedEvolution;
     }
+
     
     
 }

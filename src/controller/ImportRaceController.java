@@ -8,6 +8,9 @@ package controller;
 //import com.jfoenix.controls.JFXButton;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.effects.JFXDepthManager;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -15,12 +18,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
+import javafx.scene.layout.Pane;
+import javafx.stage.FileChooser;
+import util.AlertTypeShow;
 
 /**
  *
@@ -30,26 +32,36 @@ public class ImportRaceController implements Initializable {
 
     @FXML
     private JFXButton suivant;
+    @FXML
+    private BorderPane importRaceBorder;
+    @FXML
+    private Pane paneInfo;
+    @FXML
+    private JFXTextField afficheFicheirChoisit;
 
-//    @FXML
-//    private JFXButton suivant;
-//       s
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        
+        JFXDepthManager.setDepth(paneInfo, 5);
     }
 
     @FXML
-    private void importBouvin2(MouseEvent event) throws IOException {
+    private void importBovin(ActionEvent event) throws IOException {
+        AnchorPane root = null;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Bovin.fxml"));
-
-        AnchorPane root = loader.load();
-        if (root == null) {
-            System.out.println("root est null");
-        } else {
-            MainController mainController = loader.getController();
-           
+        root = loader.load();
+        importRaceBorder.setCenter(root);
+        importRaceBorder.setTop(null);
+    }
+    @FXML
+    private void uploadFileExl(ActionEvent event) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setInitialDirectory(new File("C:\\Users"));
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Exel ", "*.Xlsx"));
+        File selectedFile = fileChooser.showOpenDialog(null);
+        if (selectedFile != null) {
+            afficheFicheirChoisit.setText(selectedFile.getAbsolutePath());
+        }else{
+            AlertTypeShow.showAlertError("Choisit un fichier Obligatoire!!!");
         }
     }
 

@@ -27,49 +27,37 @@ import javafx.scene.layout.VBox;
  * @author pc
  */
 public class MainController implements Initializable {
+      
     
     @FXML
     private BorderPane principalBorder;
     @FXML
     private Pane paneImportRace;
-    @FXML
-    private JFXButton suivant;
-    @FXML
-    private Pane paneInfo;
+   
     @FXML
     private AnchorPane hboxMenu;
     @FXML
     private VBox vboxMenu;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        paneImportRace.setVisible(false);
-          JFXDepthManager.setDepth(paneInfo, 5);
+   
            JFXDepthManager.setDepth(vboxMenu, 5);
           JFXDepthManager.setDepth(hboxMenu, 3);
     }
     
-    private void importBouvin(ActionEvent event) throws IOException {
-        AnchorPane root = null;
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Bovin.fxml"));
-        root = loader.load();
-        principalBorder.setCenter(root);
-    }
+ 
     
     @FXML
-    private void IimportRace(ActionEvent event) throws IOException {
+    private void importRace(ActionEvent event) throws IOException {
         
-        paneImportRace.setVisible(true);
-        principalBorder.setCenter(paneImportRace);
-    }
-    
-    @FXML
-    private void importBouvin2(MouseEvent event) throws IOException {
-         paneImportRace.setVisible(false);
-         AnchorPane root = null;
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Bovin.fxml"));
+         BorderPane root = null;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ImportRace.fxml"));
         root = loader.load();
         principalBorder.setCenter(root);
     }
+    
+     
+    
 
     @FXML
     private void appelEvolutionView(ActionEvent event) throws IOException {
@@ -80,9 +68,18 @@ public class MainController implements Initializable {
     }
     @FXML
     private void  controleMensuel(ActionEvent event) throws IOException {
+        
          paneImportRace.setVisible(false);
-         AnchorPane root = null;
+         BorderPane root = null;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ControleMensuel.fxml"));
+        root = loader.load();
+        principalBorder.setCenter(root);
+    }
+
+    @FXML
+    private void showUtilisateur(ActionEvent event) throws IOException {
+          BorderPane root = null;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/UserInfo.fxml"));
         root = loader.load();
         principalBorder.setCenter(root);
     }
