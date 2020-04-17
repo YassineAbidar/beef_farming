@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class ControleMensuel {
     private long id;
-    private BigDecimal Poids;
+    private double Poids;
     private Date date;
     private Bovin bovin;
     private ImporteRace importeRace;
@@ -28,11 +28,11 @@ public class ControleMensuel {
         this.id = id;
     }
 
-    public BigDecimal getPoids() {
+    public double getPoids() {
         return Poids;
     }
 
-    public void setPoids(BigDecimal Poids) {
+    public void setPoids(double Poids) {
         this.Poids = Poids;
     }
 

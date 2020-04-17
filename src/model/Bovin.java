@@ -16,7 +16,7 @@ public class Bovin {
 
     private long id;
     private long idBoucle;//reference
-    private int age;
+    private double age;
     private String nom;
     private List<ControleMensuel> controleMensuels;
     public long getId() {
@@ -33,11 +33,11 @@ public class Bovin {
     public void setIdBoucle(long idBoucle) {
         this.idBoucle = idBoucle;
     }
-    public int getAge() {
+    public double getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(double age) {
         this.age = age;
     }
 

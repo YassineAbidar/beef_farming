@@ -15,7 +15,7 @@ import java.sql.SQLException;
 
 public class ConnectBd {
 
-    private static final String DATABASE_URL = "jdbc:mysql://localhost/beeFarming";
+    private static final String DATABASE_URL = "jdbc:mysql://localhost/beef_farming";
     private static final String DATABASE_USERNAME = "root";
     private static final String DATABASE_PASSWORD = "";
     private static final String jdbcDriver = "com.mysql.jdbc.Driver";
