@@ -16,15 +16,15 @@
    <center>
       <Pane prefHeight="543.0" prefWidth="552.0" BorderPane.alignment="CENTER">
          <children>
-            <Pane layoutX="-7.0" prefHeight="540.0" prefWidth="568.0" style="-fx-background-color: #00bfff;">
+            <Pane layoutX="-7.0" prefHeight="540.0" prefWidth="568.0" style="-fx-background-color: #FFF;">
                <children>
-                  <JFXPasswordField fx:id="password" focusColor="#fcfcfc" layoutX="137.0" layoutY="297.0" prefHeight="27.0" prefWidth="315.0" promptText="Password" unFocusColor="#fcfcfc">
+                  <JFXPasswordField fx:id="password" focusColor="DEEPSKYBLUE" layoutX="137.0" layoutY="297.0" prefHeight="27.0" prefWidth="315.0" promptText="Password" unFocusColor="#fcfcfc">
                      <font>
                         <Font name="Arial" size="15.0" />
                      </font>
                   </JFXPasswordField>
                   <JFXButton fx:id="main" layoutX="393.0" layoutY="386.0" onAction="#main" prefHeight="34.0" prefWidth="111.0" style="-fx-background-color: #ffffff;" text="connexion" textFill="#141212" />
-                  <JFXTextField fx:id="login" focusColor="#eff1f5" layoutX="139.0" layoutY="204.0" prefHeight="38.0" prefWidth="310.0" promptText="Login" unFocusColor="#eeeaea">
+                  <JFXTextField fx:id="login" focusColor="DEEPSKYBLUE" layoutX="139.0" layoutY="204.0" prefHeight="38.0" prefWidth="310.0" promptText="Login" unFocusColor="#eeeaea">
                      <font>
                         <Font size="17.0" />
                      </font>
@@ -39,11 +39,11 @@
                         <Font size="18.0" />
                      </font>
                   </Hyperlink>
-                  <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="102.0" layoutY="231.0" size="25" wrappingWidth="19.64285659790039" />
-                  <FontAwesomeIconView fill="WHITE" glyphName="UNLOCK_ALT" layoutX="104.0" layoutY="318.0" size="25" wrappingWidth="16.071428298950195" />
-                  <ImageView fitHeight="157.0" fitWidth="224.0" layoutX="168.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                  <FontAwesomeIconView fill="DEEPSKYBLUE" glyphName="USER" layoutX="102.0" layoutY="231.0" size="25" wrappingWidth="19.64285659790039" />
+                  <FontAwesomeIconView fill="DEEPSKYBLUE" glyphName="UNLOCK_ALT" layoutX="104.0" layoutY="318.0" size="25" wrappingWidth="16.071428298950195" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="184.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/gigBlue.gif" />
+                        <Image url="@image/comp-2.gif" />
                      </image>
                   </ImageView>
                   

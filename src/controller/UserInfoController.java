@@ -5,8 +5,10 @@
  */
 package controller;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
-import dataBase.UserBd;
+import model.dataBase.UserBd;
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -14,11 +16,20 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import model.User;
 
 /**
@@ -112,18 +123,63 @@ public class UserInfoController implements Initializable {
         int st = 0;
 //        System.out.println("delete User");
         User user = tableViweUser.getSelectionModel().getSelectedItem();
-        st = UserBd.delete(user);
-        if (st == 0) {
-            System.out.println("errrr");
-        } else {
-            System.out.println("deleted");
-        }
-        tableViweUser.getItems().clear();
-        fillTable();
+//        boolean rep;
+        Stage stage = new Stage();
+        Group group = new Group();
+        Scene scene = new Scene(group, 400, 180);
+        JFXButton yes = new JFXButton("Oui");
+        Label label = new Label("Vous Voulez Vraiment Supprimer L'utilisateur ?");
+        JFXButton no = new JFXButton("Non");
+        no.setLayoutY(80);
+        no.setLayoutX(280);
+        yes.setLayoutY(80);
+        yes.setLayoutX(100);
+        label.setLayoutX(15);
+        label.setLayoutY(15);
+        group.getChildren().addAll(yes, no, label);
+        stage.setScene(scene);
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("Confirmation");
+        stage.show();
+        stage.setResizable(false);
+        stage.setMaximized(false);
+
+        yes.setOnAction(e -> {
+            if (UserBd.delete(user) == 0) {
+                System.out.println("errrr");
+            } else {
+                System.out.println("deleted");
+            }
+            tableViweUser.getItems().clear();
+            fillTable();
+            stage.close();
+        });
+        no.setOnAction(e -> {
+            stage.close();
+        });
     }
 
     public void updateTableView(ObservableList<User> users1) {
         tableViweUser.getItems().clear();
         tableViweUser.setItems(users);
+    }
+
+    @FXML
+    private void ajouterUser(ActionEvent event) throws IOException {
+        BorderPane root = null;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Inscription.fxml"));
+        root = loader.load();
+//        inscriptionController.saveUser(true);
+//            root = loader.load();
+        Stage window = new Stage();
+        Scene scene = new Scene(root, 568, 540);
+        window.setScene(scene);
+        window.setTitle("Ajouter User");
+        window.initModality(Modality.APPLICATION_MODAL);
+//        window.setResizable(false);
+//        window.setMaximized(false);
+        window.show();
+        InscriptionController inscriptionController = loader.getController();
+        inscriptionController.getPrevious().setVisible(false);
     }
 }

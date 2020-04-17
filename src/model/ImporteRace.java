@@ -15,11 +15,12 @@ import java.util.List;
  */
 public class ImporteRace {
     private long id;
+    private String reference;
     private List<ControleMensuel> controleMensuels;//bovins
     private Fournisseur fournisseur;
     private Import importe;
-    private BigDecimal prix;//pour le kg
-    private BigDecimal prixTotale;
+    private double prix;//pour le kg
+    private double prixTotale;
     private long nombreBovins;
     private Race race;
     private List<ExpectedEvolution> expectedEvolution;
@@ -31,11 +32,9 @@ public class ImporteRace {
     public void setId(long id) {
         this.id = id;
     }
-
     public List<ControleMensuel> getControleMensuels() {
         return controleMensuels;
     }
-
     public void setControleMensuels(List<ControleMensuel> controleMensuels) {
         this.controleMensuels = controleMensuels;
     }
@@ -56,21 +55,33 @@ public class ImporteRace {
         this.importe = importe;
     }
 
-    public BigDecimal getPrix() {
+    public String getReference() {
+        return reference;
+    }
+
+    public void setReference(String reference) {
+        this.reference = reference;
+    }
+
+   
+
+    public double getPrix() {
         return prix;
     }
 
-    public void setPrix(BigDecimal prix) {
+    public void setPrix(double prix) {
         this.prix = prix;
     }
 
-    public BigDecimal getPrixTotale() {
+    public double getPrixTotale() {
         return prixTotale;
     }
 
-    public void setPrixTotale(BigDecimal prixTotale) {
+    public void setPrixTotale(double prixTotale) {
         this.prixTotale = prixTotale;
     }
+
+    
 
     public long getNombreBovins() {
         return nombreBovins;

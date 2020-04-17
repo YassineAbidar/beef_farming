@@ -8,8 +8,8 @@ package controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import dataBase.ConnectBd;
-import dataBase.UserBd;
+import model.dataBase.ConnectBd;
+import model.dataBase.UserBd;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -28,8 +28,9 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import lancher.BeefFarmingProject;
 import model.User;
-import util.AlertTypeShow;
-import util.HashPassword;
+import model.util.AlertTypeShow;
+import model.util.HashPassword;
+
 
 /**
  *

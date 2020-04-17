@@ -15,27 +15,10 @@ import java.util.List;
 public class ExpectedEvolution {
 
     private long id;
-    private BigDecimal evolutionMoyenne;
+    private double evolutionMoyenne;
     private ImporteRace importeRaces;
-    private int minAge;
-    private int maxAge;
-    public float moyenEvolu;
-
-    public int getMinAge() {
-        return minAge;
-    }
-
-    public void setMinAge(int minAge) {
-        this.minAge = minAge;
-    }
-
-    public int getMaxAge() {
-        return maxAge;
-    }
-
-    public void setMaxAge(int maxAge) {
-        this.maxAge = maxAge;
-    }
+    private int ageMin;
+    private int ageMax;
 
     public long getId() {
         return id;
@@ -45,11 +28,11 @@ public class ExpectedEvolution {
         this.id = id;
     }
 
-    public BigDecimal getEvolutionMoyenne() {
+    public double getEvolutionMoyenne() {
         return evolutionMoyenne;
     }
 
-    public void setEvolutionMoyenne(BigDecimal evolutionMoyenne) {
+    public void setEvolutionMoyenne(double evolutionMoyenne) {
         this.evolutionMoyenne = evolutionMoyenne;
     }
 
@@ -61,14 +44,19 @@ public class ExpectedEvolution {
         this.importeRaces = importeRaces;
     }
 
-    public float getMoyenEvolu() {
-        return moyenEvolu;
+    public int getAgeMin() {
+        return ageMin;
     }
 
-    public void setMoyenEvolu(float moyenEvolu) {
-        this.moyenEvolu = moyenEvolu;
+    public void setAgeMin(int ageMin) {
+        this.ageMin = ageMin;
     }
 
-   
+    public int getAgeMax() {
+        return ageMax;
+    }
 
+    public void setAgeMax(int ageMax) {
+        this.ageMax = ageMax;
+    }
 }

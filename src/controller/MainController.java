@@ -83,4 +83,8 @@ public class MainController implements Initializable {
         root = loader.load();
         principalBorder.setCenter(root);
     }
+
+    @FXML
+    private void showFournisseur(ActionEvent event) {
+    }
 }

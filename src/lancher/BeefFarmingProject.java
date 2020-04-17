@@ -5,7 +5,7 @@
  */
 package lancher;
 
-import dataBase.ConnectBd;
+import model.dataBase.ConnectBd;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;

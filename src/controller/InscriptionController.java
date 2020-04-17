@@ -9,7 +9,8 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import dataBase.UserBd;
+import model.dataBase.UserBd;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
 import java.io.IOException;
 import java.net.URL;
@@ -23,16 +24,17 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import model.User;
 import model.service.UserService;
-import util.AlertTypeShow;
-import util.HashPassword;
+import model.util.AlertTypeShow;
+import model.util.HashPassword;
 
 /**
  *
  * @author pc
  */
 public class InscriptionController implements Initializable {
-    public UserService userService= new UserService();
-
+    
+    public UserService userService = new UserService();
+    
     @FXML
     private BorderPane principeBorder;
     @FXML
@@ -63,50 +65,82 @@ public class InscriptionController implements Initializable {
     private MaterialDesignIconView iconPassword;
     @FXML
     private MaterialDesignIconView iconConfirmPass;
-
+    @FXML
+    private FontAwesomeIconView iconePrevi;
+    
+    public FontAwesomeIconView getIconePrevi() {
+        return iconePrevi;
+    }
+    
+    public void setIconePrevi(FontAwesomeIconView iconePrevi) {
+        this.iconePrevi = iconePrevi;
+    }
+    
+    public JFXButton getPrevious() {
+        return previous;
+    }
+    
+    public void setPrevious(JFXButton previous) {
+        this.previous = previous;
+    }
+    
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        userComboBox.getItems().addAll("Admin", "Elvateur","Technicien");
+        userComboBox.getItems().addAll("Admin", "Elvateur", "Technicien");
         userComboBox.setValue("Elvateur");
     }
-
+    
     @FXML
     private void connexion(ActionEvent event) throws IOException {
-       userService.connexion(principeBorder);
+        BorderPane root = null;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Connexion.fxml"));
+        root = loader.load();
+        principeBorder.setCenter(root);
     }
-
-    @FXML
-    private void saveUser(ActionEvent event) {
+    
+    public void saveUser(boolean Nredirect) throws IOException {
         int rep = 0;
         if (validationInput() == 0) {
             User user = new User();
             user.setEmail(email.getText());
             user.setLogin(login.getText());
             user.setNom(nom.getText());
-            user.setPassword( HashPassword.encryptPassword(password.getText()));
+            user.setPassword(HashPassword.encryptPassword(password.getText()));
             user.setPrenom(prenom.getText());
             user.setRole(userComboBox.getValue().toString());
             rep = UserBd.save(user);
             if (rep == 0) {
-               AlertTypeShow.showAlertError("Email Ou Login est deja existe");
+                AlertTypeShow.showAlertError("Email Ou Login est deja existe");
+            } else if (!Nredirect) {
+                AlertTypeShow.showAlertInfor("Nouvelle Utilisateur Est Ajouter Avec succes");
+                BorderPane root = null;
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Connexion.fxml"));
+                root = loader.load();
+                principeBorder.setCenter(root);
             } else {
-               AlertTypeShow.showAlertInfor("Nouvelle Utilisateur Est Ajouter Avec succes");
+                AlertTypeShow.showAlertInfor("Nouvelle Utilisateur Est Ajouter Avec succes");
+                email.setText("");
+                prenom.setText("");
+                nom.setText("");
+                login.setText("");
+                confirmPasword.setText("");
+                password.setText("");
             }
-        } 
+        }
     }
-
+    
     public int validationInput() {
         int cmp = 0;
-        if (password.getText().isEmpty() || password.getText().length()<8) {
+        if (password.getText().isEmpty() || password.getText().length() < 8) {
             iconPassword.setVisible(true);
             password.setUnFocusColor(Color.RED);
-             AlertTypeShow.showAlertError(" Au minimum 8 Caractere Pour Password");
+            AlertTypeShow.showAlertError(" Au minimum 8 Caractere Pour Password");
             cmp++;
         } else {
             iconPassword.setVisible(false);
             password.setUnFocusColor(Color.WHITE);
         }
-        if (email.getText().isEmpty() || email.getText().length()<15 || !email.getText().contains("@") || !email.getText().contains(".") ) {
+        if (email.getText().isEmpty() || email.getText().length() < 15 || !email.getText().contains("@") || !email.getText().contains(".")) {
             iconEmail.setVisible(true);
             email.setUnFocusColor(Color.RED);
             cmp++;
@@ -146,13 +180,13 @@ public class InscriptionController implements Initializable {
             login.setUnFocusColor(Color.WHITE);
             icnLogin.setVisible(false);
         }
-        if (!password.getText().equals(confirmPasword.getText()) ||  password.getText().isEmpty() ) {
+        if (!password.getText().equals(confirmPasword.getText()) || password.getText().isEmpty()) {
             iconConfirmPass.setVisible(true);
             confirmPasword.setUnFocusColor(Color.RED);
             iconPassword.setVisible(true);
             password.setUnFocusColor(Color.RED);
             cmp++;
-        }else{
+        } else {
             iconConfirmPass.setVisible(false);
             confirmPasword.setUnFocusColor(Color.WHITE);
             iconPassword.setVisible(false);
@@ -160,10 +194,14 @@ public class InscriptionController implements Initializable {
         }
         return cmp;
     }
-
+    
     @FXML
     private void EffaceIcon(MouseEvent event) {
         System.out.println("test clicked");
+    }
+    
+    public void test() throws IOException {
+        saveUser(true);
     }
     
 }

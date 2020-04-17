@@ -15,13 +15,13 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="principalBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="711.0" prefWidth="1100.0" stylesheets="@../css/maincontroller.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+<BorderPane fx:id="principalBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="711.0" prefWidth="1100.0" stylesheets="@css/maincontroller.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <left>
       <VBox fx:id="vboxMenu" nodeOrientation="LEFT_TO_RIGHT" prefHeight="685.0" prefWidth="277.0" style="-fx-background-color: #EBEBF9;" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="231.0" fitWidth="277.0" pickOnBounds="true">
                <image>
-                  <Image url="@../images/393f52da-1fe2-4cdb-84be-0489dcc6cc32_200x200.png" />
+                  <Image url="@image/393f52da-1fe2-4cdb-84be-0489dcc6cc32_200x200.png" />
                </image>
             </ImageView>
             <Line endX="82.29289245605469" endY="1.4497535228729248" startX="-100.0" stroke="#153f46">
@@ -46,7 +46,7 @@
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true">
                      <image>
-                        <Image url="@../images/BOUVIN.png" />
+                        <Image url="@image/BOUVIN.png" />
                      </image>
                      <viewport>
                         <Rectangle2D />
@@ -125,6 +125,17 @@
                <padding>
                   <Insets left="50.0" />
                </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="571.0" onAction="#showFournisseur" prefHeight="52.0" prefWidth="277.0" text="Fournisseur">
+               <font>
+                  <Font name="Bell MT" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fill="#00bcd4" glyphName="USER" size="25" />
+               </graphic>
             </JFXButton>
             <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" prefHeight="51.0" prefWidth="277.0" text="Se Déconnecter">
                <graphic>

@@ -60,7 +60,7 @@
                   </JFXComboBox>
                </children>
             </HBox>
-            <JFXButton layoutX="620.0" layoutY="627.0" prefHeight="36.0" prefWidth="185.0" style="-fx-background-color: #26C6DA;" text="Ajouter User" />
+            <JFXButton layoutX="620.0" layoutY="627.0" onAction="#ajouterUser" prefHeight="36.0" prefWidth="185.0" style="-fx-background-color: #26C6DA;" text="Ajouter User" />
          </children>
       </AnchorPane>
    </center>

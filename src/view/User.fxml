@@ -16,10 +16,10 @@
                      <children>
                         <ImageView fitHeight="223.0" fitWidth="273.0" layoutY="101.0" pickOnBounds="true">
                            <image>
-                              <Image url="@../images/393f52da-1fe2-4cdb-84be-0489dcc6cc32_200x200.png" />
+                              <Image url="@image/393f52da-1fe2-4cdb-84be-0489dcc6cc32_200x200.png" />
                            </image>
                         </ImageView>
-                        <BorderPane fx:id="principeBorder" layoutX="266.0" prefHeight="509.0" prefWidth="574.0">
+                        <BorderPane fx:id="principeBorder" layoutX="266.0" prefHeight="541.0" prefWidth="574.0">
                            <center>
                               
                            </center>

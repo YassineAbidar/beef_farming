@@ -25,6 +25,20 @@ public class Fournisseur {
         return importeRaces;
     }
 
+    public Fournisseur(Long id, String nom, String prenom, String tele, String email, String adresse, String raisonSocial) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.tele = tele;
+        this.email = email;
+        this.adresse = adresse;
+        this.raisonSocial = raisonSocial;
+    }
+
+    
+    public Fournisseur() {
+    }
+
     public void setImporteRaces(List<ImporteRace> importeRaces) {
         this.importeRaces = importeRaces;
     }
@@ -83,6 +97,17 @@ public class Fournisseur {
 
     public void setPrenom(String prenom) {
         this.prenom = prenom;
+    }
+
+    public Fournisseur(Long id, String nom, String prenom, String tele, String email, String adresse, String raisonSocial, List<ImporteRace> importeRaces) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.tele = tele;
+        this.email = email;
+        this.adresse = adresse;
+        this.raisonSocial = raisonSocial;
+        this.importeRaces = importeRaces;
     }
     
     
