@@ -9,7 +9,7 @@ import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.effects.JFXDepthManager;
 import model.dataBase.BovinBd;
 import model.dataBase.ControleMensuelBd;
-import model.dataBase.ImportRaceBd;
+import model.dataBase.ImporteRaceBd;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -54,7 +54,7 @@ public class ControleMensuelController implements Initializable{
         Bovin bovin=BovinBd.findByIdBoucle(Long.valueOf(idBoucle.getText()));
         if(bovin!=null){
              controleMensuel.setBovin(bovin);
-         Long idImportRace=ImportRaceBd.findIdImortRaceByIdBovin(controleMensuel.getBovin().getId());
+         Long idImportRace=ImporteRaceBd.findIdImortRaceByIdBovin(controleMensuel.getBovin().getId());
          if(idImportRace!=null){
               long millis=System.currentTimeMillis();  
                java.sql.Date date=new java.sql.Date(millis);

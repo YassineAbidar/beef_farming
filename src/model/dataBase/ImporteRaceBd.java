@@ -14,7 +14,7 @@ import model.ImporteRace;
  *
  * @author pc
  */
-public class ImportRaceBd {
+public class ImporteRaceBd {
     
        public static Long findIdImortRaceByIdBovin(Long idBovin){
           
