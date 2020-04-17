@@ -33,11 +33,12 @@
                            </font>
                         </JFXButton>
                         <JFXTextField layoutX="124.0" layoutY="173.0" prefHeight="40.0" prefWidth="395.0" promptText="Prix par Kg(*)" unFocusColor="#742dd6" />
-                        <JFXTextField layoutX="124.0" layoutY="234.0" prefHeight="40.0" prefWidth="395.0" promptText="Fournisseur(*)" unFocusColor="#742dd6" />
-                        <JFXTextField layoutX="124.0" layoutY="303.0" prefHeight="40.0" prefWidth="395.0" promptText="Nombre de Bovin(*)" unFocusColor="#742dd6" />
-                        <JFXComboBox layoutX="202.0" layoutY="109.0" prefHeight="31.0" prefWidth="215.0" promptText="Race" unFocusColor="#742dd6" />
-                        <JFXButton layoutX="124.0" layoutY="371.0" onAction="#uploadFileExl" prefHeight="38.0" prefWidth="274.0" text="Choisir Fichier  (Expected Evolution)" />
-                        <JFXTextField fx:id="afficheFicheirChoisit" disable="true" layoutX="123.0" layoutY="423.0" prefHeight="31.0" prefWidth="394.0" promptText="Fichier Choisit" unFocusColor="#742dd6" />
+                        <JFXTextField layoutX="124.0" layoutY="233.0" prefHeight="40.0" prefWidth="395.0" promptText="Fournisseur(*)" unFocusColor="#742dd6" />
+                        <JFXButton  layoutX="124.0" layoutY="293.0" onAction="#uploadXlExpectedEvolution" prefHeight="38.0" prefWidth="274.0" text="Choisir Fichier  (Expected Evolution)" />
+                        <JFXTextField fx:id="importXlExpectedEvolution" disable="true" layoutX="123.0" layoutY="333.0" prefHeight="31.0" prefWidth="394.0" promptText="Fichier Choisit" unFocusColor="#742dd6" />
+                         <JFXButton  layoutX="124.0" layoutY="378.0" onAction="#uploadXlBovin" prefHeight="38.0" prefWidth="274.0" text="Choisir Fichier  (Bovins)     " />
+                        <JFXTextField fx:id="importXlBovin" disable="true" layoutX="123.0" layoutY="418.0" prefHeight="31.0" prefWidth="394.0" promptText="Fichier Choisit" unFocusColor="#742dd6" />
+                     
                      </children>
                   </Pane>
                </children>

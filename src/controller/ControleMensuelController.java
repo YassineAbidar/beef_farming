@@ -54,6 +54,7 @@ public class ControleMensuelController implements Initializable{
         Bovin bovin=BovinBd.findByIdBoucle(Long.valueOf(idBoucle.getText()));
         if(bovin!=null){
              controleMensuel.setBovin(bovin);
+             
          Long idImportRace=ImporteRaceBd.findIdImortRaceByIdBovin(controleMensuel.getBovin().getId());
          if(idImportRace!=null){
               long millis=System.currentTimeMillis();  
@@ -62,7 +63,7 @@ public class ControleMensuelController implements Initializable{
               importeRace.setId(idImportRace);
               controleMensuel.setImporteRace(importeRace);
               controleMensuel.setPoids(Double.valueOf(poids.getText()));
-              controleMensuel.setDate(date);
+              controleMensuel.setDate(date);  
               if(ControleMensuelBd.saveControleMensuel(controleMensuel)!=0){
                   AlertTypeShow.showAlertInfor("le controle Mensuel effectué avec succès");
               }else{

@@ -17,8 +17,8 @@ public class ExpectedEvolution {
     private long id;
     private double evolutionMoyenne;
     private ImporteRace importeRaces;
-    private int ageMin;
-    private int ageMax;
+    private int minAge;
+    private int maxAge;
 
     public long getId() {
         return id;
@@ -44,19 +44,21 @@ public class ExpectedEvolution {
         this.importeRaces = importeRaces;
     }
 
-    public int getAgeMin() {
-        return ageMin;
+    public int getMinAge() {
+        return minAge;
     }
 
-    public void setAgeMin(int ageMin) {
-        this.ageMin = ageMin;
+    public void setMinAge(int minAge) {
+        this.minAge = minAge;
     }
 
-    public int getAgeMax() {
-        return ageMax;
+    public int getMaxAge() {
+        return maxAge;
     }
 
-    public void setAgeMax(int ageMax) {
-        this.ageMax = ageMax;
+    public void setMaxAge(int maxAge) {
+        this.maxAge = maxAge;
     }
+
+  
 }

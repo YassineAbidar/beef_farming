@@ -64,22 +64,22 @@ public class ConnexionController implements Initializable {
 
     @FXML
     private void main(ActionEvent event) throws IOException, Exception {
-        String help = null;
-        List<User> users = new ArrayList<User>();
-
-        users = UserBd.findAll();
-        Map<String, String> map = new HashMap<String, String>();
-        for (User u : users) {
-
-            map.put(u.getLogin(), u.getPassword());
-
-        }
-        if (map.containsKey(login.getText())) {
-            String val = map.get(login.getText());   /// return la valeur correspandante a la cle en parametre
-            String passw=HashPassword.encryptPassword(password.getText());
-            if (val.equalsIgnoreCase(passw)) {
-                // infoLabel.setText("welcomme");
-                ConnectBd.getConnexion();
+//        String help = null;
+//        List<User> users = new ArrayList<User>();
+//
+//        users = UserBd.findAll();
+//        Map<String, String> map = new HashMap<String, String>();
+//        for (User u : users) {
+//
+//            map.put(u.getLogin(), u.getPassword());
+//
+//        }
+//        if (map.containsKey(login.getText())) {
+//            String val = map.get(login.getText());   /// return la valeur correspandante a la cle en parametre
+//            String passw=HashPassword.encryptPassword(password.getText());
+//            if (val.equalsIgnoreCase(passw)) {
+//                // infoLabel.setText("welcomme");
+//                ConnectBd.getConnexion();
                 Stage stage = new Stage();
                 Parent root = FXMLLoader.load(getClass().getResource("/view/MainController.fxml"));
                 Scene scene = new Scene(root);
@@ -87,16 +87,16 @@ public class ConnexionController implements Initializable {
                 stage.setScene(scene);
                 stage.show();
                 BeefFarmingProject.stage1.hide();
-            } else {
-                AlertTypeShow.showAlertError("Password or user name is wrong");
-                System.out.println("c'est pas le meme password");
-            }
-
-        } else {
-            AlertTypeShow.showAlertError("Password or user name is wrong");
-            System.out.println("n'a pas trouver name");
-
-        }
+//            } else {
+//                AlertTypeShow.showAlertError("Password or user name is wrong");
+//                System.out.println("c'est pas le meme password");
+//            }
+//
+//        } else {
+//            AlertTypeShow.showAlertError("Password or user name is wrong");
+//            System.out.println("n'a pas trouver name");
+//
+//        }
 
     }
 
